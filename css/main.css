@@ -1,0 +1,157 @@
+/* CSS NAVBAR STARTS HERE */
+
+#button{
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    height: 38px;
+    padding-top: 3px;
+    width: 38px;
+    border-radius:25px;
+    z-index: 1;
+    background-color: rgb(71, 71, 236);
+    color: white;
+    visibility: hidden;
+    animation: fadeOutUp 0.5s forwards;
+}
+.navbar{
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+.navbar
+{
+    background-image: linear-gradient( to right, rgb(71, 71, 236),rgb(77, 179, 220));
+    color: white;
+    top: 0px;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+.navbar a:hover{
+    text-decoration: underline;
+    color: white;
+}
+.navbar:hover{
+    animation: head 0.2s forwards;
+}
+.webname img{
+    height: 30px;
+}
+.nav-links ul{
+    display: flex;
+    list-style: none;
+}
+li{
+    margin-left: 25px;
+}
+#carouselExampleIndicators, #carouselExampleIndicators img{
+    height: 450px;
+}
+.navbar-nav
+{
+    text-align:right;
+    margin-right:20px;
+    color:white;
+}
+
+.menu-bar .navbar-toggler
+{
+    text-align:center;
+    color:white;
+}
+
+.navbar .fa
+{
+    color: rgb(255, 255, 255);
+    font-size:20px;
+}
+
+.navbar-brand img
+{
+    width:40px;
+    margin-top:5px;
+    margin-left:5px;
+}
+
+/* NAVBAR CSS ENDS HERE */
+.carousel, .carousel img{
+    height: 400px;
+    background-position: center;
+}
+.card{
+    box-shadow: 0px 0px 20px rgb(160, 159, 159);
+    border-radius: 8px;
+    transition: 0.5s;
+    display: flex;
+}
+.card:hover{
+    box-shadow: none;
+    transition: 0.5s;
+}
+.book{
+    position: absolute;
+    z-index: 0;
+    height: inherit;
+    width: 250px;
+    background-color: black;
+    color:white;
+    vertical-align: middle;
+    line-height: 185px;
+    border-radius: 9px;
+    animation: fadeOutUp 0.5s forwards, bookOut 0.5s forwards;
+}
+.card:hover>.book{
+    visibility: visible;
+    z-index: 1;
+    animation: fadeInDown 0.5s forwards, book 0.5s forwards;
+    opacity: 50%;
+}
+.card img{
+    height: 200px;
+    width: 250px;
+    border-radius: 8px;
+}
+.card{
+    width: 250px;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes head {
+    0%{
+        background-image: linear-gradient( to right, rgb(71, 71, 236),rgb(77, 179, 220));
+    }
+    
+    100%{
+        background-image: linear-gradient( to right, rgb(77, 179, 220), rgb(71, 71, 236));
+    }
+}
+@keyframes book{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 50%;
+    }
+}
+
+@keyframes bookOut{
+    from{
+        opacity: 50%;
+    }
+    to{
+        opacity: 0%;
+    }
+}
+@keyframes hide{
+    0%{
+        opacity: 100;
+    }
+    100%{
+        opacity: 0;
+    }
+}
